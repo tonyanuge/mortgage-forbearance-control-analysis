@@ -1,0 +1,85 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="pFTQga1XmvDSERa_Wb3C">
+    <mxGraphModel dx="774" dy="516" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SMTiH9RQ3FQulfK5qbwg-12" edge="1" parent="1" source="SMTiH9RQ3FQulfK5qbwg-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="SMTiH9RQ3FQulfK5qbwg-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="480" />
+              <mxPoint x="620" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SMTiH9RQ3FQulfK5qbwg-13" connectable="0" parent="SMTiH9RQ3FQulfK5qbwg-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Approved&amp;nbsp;decision&lt;div&gt;&amp;nbsp;and&amp;nbsp;&lt;div&gt;execution instruction&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" y="2" as="geometry">
+            <mxPoint y="-30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SMTiH9RQ3FQulfK5qbwg-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="TraceLogic Decision Governance" vertex="1">
+          <mxGeometry height="60" width="120" x="600" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="SMTiH9RQ3FQulfK5qbwg-6" edge="1" parent="1" source="SMTiH9RQ3FQulfK5qbwg-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.008;entryY=0.633;entryDx=0;entryDy=0;entryPerimeter=0;" target="SMTiH9RQ3FQulfK5qbwg-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SMTiH9RQ3FQulfK5qbwg-7" connectable="0" parent="SMTiH9RQ3FQulfK5qbwg-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Customer, account&lt;div&gt;&amp;nbsp;and case data&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SMTiH9RQ3FQulfK5qbwg-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Customer / Case Operator" vertex="1">
+          <mxGeometry height="60" width="120" x="280" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="SMTiH9RQ3FQulfK5qbwg-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Mortgage Servicing System" vertex="1">
+          <mxGeometry height="60" width="120" x="600" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="SMTiH9RQ3FQulfK5qbwg-10" edge="1" parent="1" source="SMTiH9RQ3FQulfK5qbwg-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="SMTiH9RQ3FQulfK5qbwg-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="810" y="390" />
+              <mxPoint x="810" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SMTiH9RQ3FQulfK5qbwg-11" connectable="0" parent="SMTiH9RQ3FQulfK5qbwg-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Approval decision,&amp;nbsp;&lt;div&gt;comments and&lt;/div&gt;&lt;div&gt;&amp;nbsp;approver identity&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0444" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SMTiH9RQ3FQulfK5qbwg-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Authorised Approver" vertex="1">
+          <mxGeometry height="60" width="120" x="900" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="SMTiH9RQ3FQulfK5qbwg-8" edge="1" parent="1" source="SMTiH9RQ3FQulfK5qbwg-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="SMTiH9RQ3FQulfK5qbwg-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SMTiH9RQ3FQulfK5qbwg-9" connectable="0" parent="SMTiH9RQ3FQulfK5qbwg-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Policy version, eligibility&amp;nbsp;&lt;div&gt;criteria and decision rules&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1467" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SMTiH9RQ3FQulfK5qbwg-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Policy Rules" vertex="1">
+          <mxGeometry height="60" width="120" x="600" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="SMTiH9RQ3FQulfK5qbwg-14" edge="1" parent="1" source="SMTiH9RQ3FQulfK5qbwg-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.908;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;" target="SMTiH9RQ3FQulfK5qbwg-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="500" />
+              <mxPoint x="709" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SMTiH9RQ3FQulfK5qbwg-15" connectable="0" parent="SMTiH9RQ3FQulfK5qbwg-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Execution&amp;nbsp;&lt;div&gt;result, status&amp;nbsp;&lt;/div&gt;&lt;div&gt;and reference&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0506" y="1" as="geometry">
+            <mxPoint y="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SMTiH9RQ3FQulfK5qbwg-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=18;" value="TraceLogic Data Flow Diagram" vertex="1">
+          <mxGeometry height="60" width="590" x="390" y="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

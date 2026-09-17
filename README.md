@@ -1,0 +1,248 @@
+# Mortgage Forbearance Control Analysis
+
+A self-directed Technical Business Analyst case study exploring how a mortgage forbearance decision could be assessed, approved and carried through to execution with a clearer record of the evidence, rules and controls used.
+
+The scenario and case data are synthetic. This repository contains business and system analysis, process models and proposed test scenarios. It does not represent a deployed system or completed implementation.
+
+## Business Problem
+
+In the modelled process, a customer contacts a lender because they are experiencing repayment difficulty. Information is gathered, an appropriate forbearance option is assessed, an authorised person approves the outcome, and mortgage servicing applies the agreed arrangement.
+
+Across this process, the supporting evidence, decision rationale, approval and final implementation may sit across different stages or systems.
+
+The central control question explored in this case study is:
+
+**Was the arrangement applied to the customer's mortgage the exact version that was reviewed and approved?**
+
+The analysis therefore focuses not only on reaching a decision, but on maintaining a clear relationship between:
+
+* customer evidence
+* policy and business rules
+* assessment outcome
+* approval
+* subsequent changes
+* execution
+* audit history
+
+## Scenario
+
+TraceLogic is used in this case study as the name of a **proposed decision-governance layer** around the mortgage forbearance workflow.
+
+The proposed design introduces additional controls around evidence validation, policy evaluation, independent approval, decision versioning and execution.
+
+The diagrams represent an intended design for analysis purposes. They are not a verified description of any lender's current operating model and do not represent a deployed TraceLogic implementation.
+
+## Scope and My Role
+
+I performed the analysis as an independent Technical Business Analyst portfolio project.
+
+The work covers:
+
+* current-state process modelling
+* proposed future-state process design
+* role and system-boundary analysis
+* high-level data movement
+* approval and segregation-of-duties controls
+* exception handling
+* decision-version control
+* execution-result handling
+* proposed functional test scenarios
+
+The analysis focuses on the control path from initial case intake through assessment, approval and execution.
+
+Detailed mortgage affordability calculations and the internal design of a mortgage servicing platform are outside the documented scope.
+
+No client engagement, stakeholder workshops, production-system access or live customer data were used in this project.
+
+## Analysis Approach
+
+The case study follows the mortgage forbearance decision from initial customer contact through to implementation.
+
+The analysis considers:
+
+1. how information enters the process
+2. where evidence must be checked
+3. how policy and business rules affect the decision
+4. where independent approval should occur
+5. what happens when a case changes after approval
+6. how the approved decision is passed for execution
+7. how execution failures and mismatches should be handled
+8. what information should remain available for later review
+
+The current-state model is used to identify potential handoff and control weaknesses.
+
+The proposed future-state model then introduces explicit control points and exception paths to address those weaknesses.
+
+## Key Deliverables
+
+| Deliverable                                                                                                                                      | What it demonstrates                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| [Current-state process](diagrams/current-state-mortgage-forbearance.png) · [editable source](diagrams/current-state-mortgage-forbearance.drawio) | Modelled process handoffs and potential evidence/control gaps.                                           |
+| [Future-state process](diagrams/future-state-mortgage-forbearance.png) · [editable source](diagrams/future-state-mortgage-forbearance.drawio)    | Proposed governance gates from case creation through approval and execution.                             |
+| [System context](diagrams/system-context.drawio)                                                                                                 | Proposed actors, policy source, governance boundary and mortgage servicing interaction.                  |
+| [Data flow](diagrams/data-flow.drawio)                                                                                                           | Conceptual movement of case information, policy inputs, approval information and execution results.      |
+| [Decision and exception flow](diagrams/decision-and-exception-flow.drawio)                                                                       | Paths for missing evidence, policy exceptions, approval, version mismatch and execution failure.         |
+| [Test scenarios](testing/mortgage-forbearance-test-scenarios.xlsx)                                                                               | Ten positive, negative and exception scenarios with expected outcomes. All scenarios remain **Not Run**. |
+
+The editable diagrams can be opened using diagrams.net / draw.io.
+
+PNG previews are included for the current-state and future-state process maps so the main workflow can be reviewed directly from GitHub.
+
+## Key Analysis Observations
+
+### Evidence and decision information can become separated
+
+The modelled current process contains multiple handoffs between information collection, assessment, approval and implementation.
+
+This creates the possibility that supporting evidence, approval rationale and implementation instructions could become separated.
+
+This is a **scenario assumption used for analysis**, not a measured finding about a real lender.
+
+### Approval alone does not guarantee correct execution
+
+An approved decision can still create risk if the case changes after approval or if the version sent for execution differs from the version originally approved.
+
+The proposed process therefore introduces a comparison between the approved decision version and the version submitted for execution.
+
+### Exceptions require explicit control paths
+
+The proposed flow treats exceptions as part of the process rather than as informal deviations.
+
+Examples modelled include:
+
+* incomplete or missing evidence
+* policy exceptions
+* attempted self-approval
+* material case change following approval
+* duplicate authorisation
+* decision-version mismatch
+* mortgage servicing execution failure
+
+## Proposed Control Model
+
+The future-state analysis introduces several control concepts.
+
+### Evidence Validation
+
+Required evidence should be present before the case progresses to decision and approval.
+
+### Policy Evaluation
+
+The proposed decision should be assessed against the relevant policy or business rules.
+
+### Independent Approval
+
+Where approval is required, the approving role should be independent from the person who performed the original assessment.
+
+### Decision Version Control
+
+Material changes after approval should invalidate or supersede the previous approval rather than allowing an outdated decision to proceed.
+
+### Controlled Execution
+
+The version submitted for execution should correspond to the version that was approved.
+
+### Execution Result
+
+The process should capture whether the servicing action succeeded, failed or requires further intervention.
+
+### Audit History
+
+Evidence, decision rationale, approvals, changes and execution results should remain linked so that the history of the case can later be reconstructed.
+
+## Test Design
+
+The repository includes ten proposed test scenarios covering normal processing and control failures.
+
+The scenarios include cases relating to:
+
+* successful approval and execution
+* missing evidence
+* policy exceptions
+* segregation of duties
+* stale approval after a material change
+* duplicate authorisation
+* decision-version mismatch
+* execution failure
+
+The workbook records expected outcomes but does not contain executed test evidence.
+
+All scenarios are therefore intentionally marked **Not Run**.
+
+## Technical Scope
+
+The technical component of this case study consists of conceptual system analysis, data-flow modelling, control logic and test design.
+
+The repository does not claim an implemented integration, database solution, API, runnable application or executed testing.
+
+The purpose of the project is to demonstrate how a Technical Business Analyst can translate an operational control problem into clearer process behaviour, system boundaries, exception handling and testable requirements.
+
+## Traceability Limitation
+
+The test workbook references requirement and business-rule identifiers including examples such as:
+
+* `TL-FR-011`
+* `TL-RULE-006`
+
+The corresponding requirements and business-rules register was not present in the source material used to prepare this repository.
+
+Those references should therefore currently be treated as **unverified identifiers rather than demonstrated end-to-end traceability**.
+
+A requirements and business-rules register is the main outstanding deliverable required to close this gap.
+
+The future-state diagram also refers to **deterministic replay** as a proposed design intent. The detailed rules and verification method for that capability are not defined within the current case study.
+
+## Project Status
+
+### Completed
+
+* current-state process model
+* proposed future-state process
+* system-context analysis
+* conceptual data-flow analysis
+* decision and exception modelling
+* ten proposed functional test scenarios
+* portfolio documentation and repository structure
+
+### Outstanding
+
+* requirements and business-rules register
+* reconciliation of test references against those requirements and rules
+* execution of the proposed test scenarios
+
+Potential future extensions could include a data dictionary or interface contract where they add genuine analytical value to the case study.
+
+## Tools
+
+The project deliverables were created using:
+
+* diagrams.net / draw.io
+* Microsoft Excel
+
+No SQL analysis, Postman testing or live-system testing is claimed within this repository.
+
+## Repository Structure
+
+```text
+mortgage-forbearance-control-analysis/
+│
+├── README.md
+├── .gitignore
+├── .gitattributes
+│
+├── diagrams/
+│   ├── current-state-mortgage-forbearance.png
+│   ├── current-state-mortgage-forbearance.drawio
+│   ├── future-state-mortgage-forbearance.png
+│   ├── future-state-mortgage-forbearance.drawio
+│   ├── system-context.drawio
+│   ├── data-flow.drawio
+│   └── decision-and-exception-flow.drawio
+│
+└── testing/
+    └── mortgage-forbearance-test-scenarios.xlsx
+```
+
+## Disclaimer
+
+This is a self-directed portfolio case study using a synthetic scenario and synthetic data. It is intended to demonstrate Technical Business Analyst analysis and documentation skills and should not be interpreted as a production implementation, a description of a specific lender's operating model, or evidence of client work.

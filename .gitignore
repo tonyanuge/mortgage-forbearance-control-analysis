@@ -1,0 +1,22 @@
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*
+*.tmp
+*.temp
+*.bak
+*.bkp
+.$*
+
+# Local application workspaces and caches
+.postman/
+postman/
+.vscode/
+.idea/
+__pycache__/
+
+# Private working material if copied into this repository by mistake
+Archive/
+private/
+work/
