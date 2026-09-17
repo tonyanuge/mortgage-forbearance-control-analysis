@@ -152,7 +152,7 @@ Evidence, decision rationale, approvals, changes and execution results should re
 
 ## Test Design
 
-The repository includes ten proposed test scenarios covering normal processing and control failures.
+The repository includes thirteen proposed test scenarios covering normal processing, control failures, exception handling and traceability gaps identified during requirements reconciliation.
 
 The scenarios include cases relating to:
 
@@ -177,20 +177,15 @@ The repository does not claim an implemented integration, database solution, API
 
 The purpose of the project is to demonstrate how a Technical Business Analyst can translate an operational control problem into clearer process behaviour, system boundaries, exception handling and testable requirements.
 
-## Traceability Limitation
+## Traceability 
 
-The test workbook references requirement and business-rule identifiers including examples such as:
+The repository now includes documented functional requirements, business rules, exception rules and non-functional requirements referenced by the proposed test scenarios.
 
-* `TL-FR-011`
-* `TL-RULE-006`
+A traceability matrix links requirements and rules to Jira user stories, acceptance criteria and proposed test scenarios.
 
-The corresponding requirements and business-rules register was not present in the source material used to prepare this repository.
+The reconciliation identified several direct-test coverage gaps, which were addressed by adding scenarios for decision rationale, approval outcomes and controlled decision-version creation.
 
-Those references should therefore currently be treated as **unverified identifiers rather than demonstrated end-to-end traceability**.
-
-A requirements and business-rules register is the main outstanding deliverable required to close this gap.
-
-The future-state diagram also refers to **deterministic replay** as a proposed design intent. The detailed rules and verification method for that capability are not defined within the current case study.
+Traceability currently demonstrates design coverage only. The test scenarios have not been executed, so the matrix does not represent verified implementation behaviour.
 
 ## Project Status
 
@@ -201,16 +196,23 @@ The future-state diagram also refers to **deterministic replay** as a proposed d
 * system-context analysis
 * conceptual data-flow analysis
 * decision and exception modelling
-* ten proposed functional test scenarios
 * portfolio documentation and repository structure
+* requirements register
+* business-rules register
+* exception-rules register
+* non-functional requirements register
+* requirements-to-test traceability matrix
+* thirteen proposed functional and control test scenarios
 
 ### Outstanding
 
-* requirements and business-rules register
-* reconciliation of test references against those requirements and rules
 * execution of the proposed test scenarios
 
-Potential future extensions could include a data dictionary or interface contract where they add genuine analytical value to the case study.
+## Potential future extensions
+
+* data dictionary, where it adds analytical value
+* interface contract, where it adds analytical value
+* additional test execution evidence if an appropriate implementation becomes available
 
 ## Tools
 
