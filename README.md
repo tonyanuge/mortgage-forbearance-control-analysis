@@ -193,30 +193,39 @@ Traceability currently demonstrates design coverage only. The test scenarios hav
 
 ## Project Status
 
-### Completed
+### Current Scope Complete
 
-* current-state process model
-* proposed future-state process
+The defined analysis and design scope for this case study is complete.
+
+Completed deliverables include:
+
+* business problem, scope, assumptions and open-question definition
+* business, functional and non-functional requirements
+* business rules and exception rules
+* eight prioritised Jira user stories with acceptance criteria
+* current-state mortgage-forbearance process model
+* proposed future-state process model
 * system-context analysis
 * conceptual data-flow analysis
 * decision and exception modelling
-* portfolio documentation and repository structure
-* requirements register
-* business-rules register
-* exception-rules register
-* non-functional requirements register
-* requirements-to-test traceability matrix
-* thirteen proposed functional and control test scenarios
+* requirements, rules, Jira and test traceability
+* thirteen proposed functional, control and exception test scenarios
+* consolidated Jira delivery evidence
+* Confluence-derived analysis documentation
+* repository documentation and evidence packaging
 
-### Outstanding
+The proposed test scenarios remain intentionally marked Not Run because the repository does not contain an implemented system against which execution evidence can be produced.
 
-* execution of the proposed test scenarios
+Open requirements and coverage gaps documented within the project remain visible where validation would require stakeholder confirmation, production-system access, agreed operational targets or an implemented solution. These are project limitations rather than incomplete deliverables within the current scope.
 
 ## Potential future extensions
 
-* data dictionary, where it adds analytical value
-* interface contract, where it adds analytical value
+The project may be extended in future where additional analysis provides genuine value. Potential extensions include:
+
+* data dictionary
+* iinterface contract
 * additional test execution evidence if an appropriate implementation becomes available
+* test execution evidence if an appropriate implementation becomes available
 
 ## Tools
 
