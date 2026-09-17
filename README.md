@@ -75,14 +75,18 @@ The proposed future-state model then introduces explicit control points and exce
 
 ## Key Deliverables
 
-| Deliverable                                                                                                                                      | What it demonstrates                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
-| [Current-state process](diagrams/current-state-mortgage-forbearance.png) · [editable source](diagrams/current-state-mortgage-forbearance.drawio) | Modelled process handoffs and potential evidence/control gaps.                                           |
-| [Future-state process](diagrams/future-state-mortgage-forbearance.png) · [editable source](diagrams/future-state-mortgage-forbearance.drawio)    | Proposed governance gates from case creation through approval and execution.                             |
-| [System context](diagrams/system-context.drawio)                                                                                                 | Proposed actors, policy source, governance boundary and mortgage servicing interaction.                  |
-| [Data flow](diagrams/data-flow.drawio)                                                                                                           | Conceptual movement of case information, policy inputs, approval information and execution results.      |
-| [Decision and exception flow](diagrams/decision-and-exception-flow.drawio)                                                                       | Paths for missing evidence, policy exceptions, approval, version mismatch and execution failure.         |
-| [Test scenarios](testing/mortgage-forbearance-test-scenarios.xlsx)                                                                               | Ten positive, negative and exception scenarios with expected outcomes. All scenarios remain **Not Run**. |
+| Deliverable | What it demonstrates |
+| --- | --- |
+| [Business Problem and Scope](analysis/TL-E01-business-problem-and-scope.pdf) | Defines the modelled business problem, scope boundaries, stakeholders, assumptions, success measures and open questions for the mortgage-forbearance case study. |
+| [Requirements, Rules and NFR Catalogue](analysis/TL-E02-requirements-rules-and-nfr-catalogue.pdf) | Defines the business requirements, functional requirements, business rules, exception rules and non-functional requirements used across the analysis. |
+| [Prioritised User Stories and Acceptance Criteria](analysis/TL-E03-prioritised-user-stories-and-acceptance-criteria.pdf) | Shows how requirements were translated into eight prioritised Jira user stories with acceptance criteria and requirements traceability. |
+| [Jira User Story Evidence](jira/jira-mortgage-forbearance-user-stories.xlsx) | Consolidates the Jira delivery items from SCRUM-1 through SCRUM-8, including story details, priorities, acceptance criteria and activity history. |
+| [Current-state process](diagrams/current-state-mortgage-forbearance.png) · [editable source](diagrams/current-state-mortgage-forbearance.drawio) | Models the current process handoffs and the potential evidence and control gaps used as assumptions for the analysis. |
+| [Future-state process](diagrams/future-state-mortgage-forbearance.png) · [editable source](diagrams/future-state-mortgage-forbearance.drawio) | Models the proposed governance gates from controlled case creation through assessment, approval, execution and outcome recording. |
+| [System context](diagrams/system-context.drawio) | Shows the proposed actors, policy source, TraceLogic governance boundary and mortgage-servicing interaction. |
+| [Data flow](diagrams/data-flow.drawio) | Shows the conceptual movement of case information, policy inputs, approval information and execution results. |
+| [Decision and exception flow](diagrams/decision-and-exception-flow.drawio) | Models control paths for missing evidence, policy exceptions, approval, version mismatch and execution failure. |
+| [Test scenarios and traceability workbook](testing/mortgage-forbearance-test-scenarios.xlsx) | Contains thirteen proposed functional, control and exception test scenarios, together with requirements, rules, NFRs, open issues and traceability. All scenarios remain **Not Run**. |
 
 The editable diagrams can be opened using diagrams.net / draw.io.
 
@@ -218,10 +222,12 @@ Traceability currently demonstrates design coverage only. The test scenarios hav
 
 The project deliverables were created using:
 
-* diagrams.net / draw.io
-* Microsoft Excel
+- Confluence for business analysis documentation, requirements, rules, NFRs and traceability documentation
+- Jira for prioritised user stories, acceptance criteria and delivery-item tracking
+- diagrams.net / draw.io for process, system-context, data-flow and decision/exception modelling
+- Microsoft Excel for test design, requirements registers, rules, open issues and traceability
 
-No SQL analysis, Postman testing or live-system testing is claimed within this repository.
+No SQL analysis, Postman testing, live-system testing, production implementation or client work is claimed within this repository.
 
 ## Repository Structure
 
@@ -229,8 +235,17 @@ No SQL analysis, Postman testing or live-system testing is claimed within this r
 mortgage-forbearance-control-analysis/
 │
 ├── README.md
+│
 ├── .gitignore
 ├── .gitattributes
+│
+├── analysis/
+│   ├── TL-E01-business-problem-and-scope.pdf
+│   ├── TL-E02-requirements-rules-and-nfr-catalogue.pdf
+│   └── TL-E03-prioritised-user-stories-and-acceptance-criteria.pdf
+│
+├── jira/
+│   └── jira-mortgage-forbearance-user-stories.xlsx
 │
 ├── diagrams/
 │   ├── current-state-mortgage-forbearance.png
